@@ -15,11 +15,10 @@ exports.createSubSection = async (req, res) => {
         .json({ success: false, message: "All Fields are Required" })
     }
     // console.log(video)
-    // nwdovn
 
 
     const uploadDetails = await uploadImageToCloudinary(
-      video,
+      video,  
       process.env.FOLDER_NAME
     )
     // console.log(uploadDetails)
