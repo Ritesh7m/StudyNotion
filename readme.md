@@ -141,7 +141,7 @@ Contributions are welcome! Please follow these steps:
 
 ## 📬 Contact
 
-For questions or inquiries, please contact: [Your Name/Organization] at [maurya.ritesh2005@gmail.com]
+For questions or inquiries, please contact: [Ritesh] at [maurya.ritesh2005@gmail.com]
 
 ## 💖 Thanks
 
