@@ -36,7 +36,7 @@ export default function RenderSteps() {
             >
               <button
                 onClick={() => dispatch(setStep(item.id))}
-                className={`grid cursor-pointer aspect-square w-[34px] place-items-center rounded-full border-[1px] ${
+                className={`grid cursor-pointer aspect-square w-[34px] place-items-center rounded-full border ${
                   step === item.id
                     ? "border-yellow-50 bg-yellow-900 text-yellow-50"
                     : "border-richblack-700 bg-richblack-800 text-richblack-300"

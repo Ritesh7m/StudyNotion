@@ -54,10 +54,10 @@ function VerifyEmail() {
         </div>
       ) : (
         <div className="max-w-[500px] p-4 lg:p-8">
-          <h1 className="text-richblack-5 font-semibold text-[1.875rem] leading-[2.375rem]">
+          <h1 className="text-richblack-5 font-semibold text-[1.875rem] leading-9.5">
             Verify Email
           </h1>
-          <p className="text-[1.125rem] leading-[1.625rem] my-4 text-richblack-100">
+          <p className="text-[1.125rem] leading-6.5 my-4 text-richblack-100">
             A verification code has been sent to you. Enter the code below
           </p>
           <form onSubmit={handleVerifyAndSignup}>
@@ -72,7 +72,7 @@ function VerifyEmail() {
                   style={{
                     boxShadow: "inset 0px -1px 0px rgba(255, 255, 255, 0.18)",
                   }}
-                  className="w-[48px] lg:w-[60px] border-0 bg-richblack-800 rounded-[0.5rem] text-richblack-5 aspect-square text-center focus:border-0 focus:outline-2 focus:outline-yellow-50"
+                  className="w-[48px] lg:w-[60px] border-0 bg-richblack-800 rounded-lg text-richblack-5 aspect-square text-center focus:border-0 focus:outline-2 focus:outline-yellow-50"
                 />
               )}
               containerStyle={{

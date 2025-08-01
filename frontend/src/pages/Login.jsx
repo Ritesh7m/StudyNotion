@@ -1,7 +1,15 @@
+import { useEffect } from "react"
 import loginImg from "../assets/Images/login.webp"
 import Template from "../components/core/Auth/Template"
+import { useNavigate } from "react-router-dom"
 
 function Login() {
+  const nav = useNavigate()
+  useEffect(() => {
+    if(localStorage.getItem("token")) {
+      nav("/home")
+    }
+  })
   return (
     <Template
       title="Welcome Back"

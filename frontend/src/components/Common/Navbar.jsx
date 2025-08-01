@@ -49,7 +49,7 @@ function Navbar() {
         location.pathname !== "/" ? "bg-richblack-800" : ""
       } transition-all duration-200`}
     >
-      <div className="flex w-11/12 max-w-maxContent items-center justify-between">
+      <div className="flex w-11/12 max-w-max-content items-center justify-between">
         <Link to="/">
           <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
         </Link>
@@ -79,8 +79,8 @@ function Navbar() {
                       <p>{link.title}</p>
                     </Link>
                     <BsChevronDown />
-                    <div className="invisible absolute left-1/2 top-1/2 z-[1000] flex w-48 lg:w-72 -translate-x-1/2 translate-y-12 flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-8 group-hover:opacity-100">
-                      <div className="absolute left-1/2 top-0 -z-10 h-6 w-6 -translate-x-1/3 -translate-y-1/2 rotate-45 rounded bg-richblack-5"></div>
+                    <div className="invisible absolute left-1/2 top-1/2 z-1000 flex w-48 lg:w-72 -translate-x-1/2 translate-y-12 flex-col rounded-lg bg-richblack-5 p-4 text-richblack-900 opacity-0 transition-all duration-150 group-hover:visible group-hover:translate-y-8 group-hover:opacity-100">
+                      <div className="absolute left-1/2 top-0 -z-10 h-6 w-6 -translate-x-1/3 -translate-y-1/2 rotate-45 rounded-sm bg-richblack-5"></div>
                       {loading ? (
                         <p className="text-center">Loading...</p>
                       ) : subLinks.length ? (
@@ -159,7 +159,7 @@ function Navbar() {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 z-[1000] w-full bg-richblack-800 px-6 py-4 md:hidden">
+        <div className="absolute top-14 left-0 z-1000 w-full bg-richblack-800 px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-y-4 text-richblack-25">
             {NavbarLinks.map((link, index) => (
               <li key={index}>

@@ -1,7 +1,15 @@
+import { useEffect } from "react"
 import signupImg from "../assets/Images/signup.webp"
 import Template from "../components/core/Auth/Template"
+import { useNavigate } from "react-router-dom"
 
 function Signup() {
+  const nav = useNavigate()
+  useEffect(() => {
+    if(localStorage.getItem("token")) {
+      nav("/home")
+    }
+  })
   return (
     <Template
       title="Join the millions learning to code with StudyNotion for free"

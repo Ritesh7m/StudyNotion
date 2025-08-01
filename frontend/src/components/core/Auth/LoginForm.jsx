@@ -35,7 +35,7 @@ function LoginForm() {
       className="mt-6 flex w-full flex-col gap-y-4"
     >
       <label className="w-full">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <p className="mb-1 text-[0.875rem] leading-5.5 text-richblack-5">
           Email Address <sup className="text-pink-200">*</sup>
         </p>
         <input
@@ -49,7 +49,7 @@ function LoginForm() {
         />
       </label>
       <label className="relative">
-        <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
+        <p className="mb-1 text-[0.875rem] leading-5.5 text-richblack-5">
           Password <sup className="text-pink-200">*</sup>
         </p>
         <input
@@ -59,11 +59,11 @@ function LoginForm() {
           value={password}
           onChange={handleOnChange}
           placeholder="Enter Password"
-          className="form-style w-full !pr-10"
+          className="form-style w-full pr-10!"
         />
         <span
           onClick={() => setShowPassword((prev) => !prev)}
-          className="absolute right-3 top-[38px] z-[10] cursor-pointer"
+          className="absolute right-3 top-[38px] z-10 cursor-pointer"
         >
           {showPassword ? (
             <AiOutlineEyeInvisible fontSize={24} fill="#AFB2BF" />

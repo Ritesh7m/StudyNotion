@@ -79,7 +79,7 @@ export default function ChipInput({
             
             <button
               type="button"
-              className="ml-2 focus:outline-none"
+              className="ml-2 focus:outline-hidden"
               onClick={() => handleDeleteChip(index)}
             >
               <MdClose className="text-sm" />

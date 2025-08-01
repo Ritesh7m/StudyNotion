@@ -16,7 +16,7 @@ function Home() {
   return (
     <div>
       {/* Section 1 */}
-      <div className="relative mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 text-white">
+      <div className="relative mx-auto flex w-11/12 max-w-max-content flex-col items-center justify-between gap-8 text-white">
         {/* Become a Instructor Button */}
         <Link to={"/signup"}>
           <div className="group mx-auto mt-16 w-fit rounded-full bg-richblack-800 p-1 font-bold text-richblack-200 drop-shadow-[0_1.5px_rgba(255,255,255,0.25)] transition-all duration-200 hover:scale-95 hover:drop-shadow-none">
@@ -98,7 +98,7 @@ function Home() {
           <CodeBlocks
             position={"lg:flex-row-reverse"}
             heading={
-              <div className="w-[100%] text-4xl font-semibold lg:w-[50%]">
+              <div className="w-full text-4xl font-semibold lg:w-[50%]">
                 Start
                 <HighlightText text={"coding in seconds"} />
               </div>
@@ -130,7 +130,7 @@ function Home() {
       <div className="bg-pure-greys-5 text-richblack-700">
         <div className="homepage_bg h-[320px]">
           {/* Explore Full Catagory Section */}
-          <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8">
+          <div className="mx-auto flex w-11/12 max-w-max-content flex-col items-center justify-between gap-8">
             <div className="lg:h-[150px]"></div>
             <div className="flex flex-row gap-7 text-white lg:mt-8">
               <CTAButton active={true} linkto={"/signup"}>
@@ -146,7 +146,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 ">
+        <div className="mx-auto flex w-11/12 max-w-max-content flex-col items-center justify-between gap-8 ">
           {/* Job that is in Demand - Section 1 */}
           <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
             <div className="text-4xl font-semibold lg:w-[45%] ">
@@ -174,7 +174,7 @@ function Home() {
       </div>
 
       {/* Section 3 */}
-      <div className="relative mx-auto my-20 flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
+      <div className="relative mx-auto my-20 flex w-11/12 max-w-max-content flex-col items-center justify-between gap-8 bg-richblack-900 text-white">
         {/* Become a instructor section */}
         <InstructorSection />
 

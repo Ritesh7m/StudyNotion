@@ -110,7 +110,7 @@ export default function SubSectionModal({
   if (!modalData) return null; 
 
   return (
-    <div className="fixed inset-0 z-[1000] grid place-items-center overflow-y-auto bg-black/40 backdrop-blur-sm p-4">
+    <div className="fixed inset-0 z-1000 grid place-items-center overflow-y-auto bg-black/40 backdrop-blur-xs p-4">
       <div className="w-full max-w-lg sm:max-w-xl md:max-w-2xl rounded-lg border border-richblack-400 bg-richblack-800 shadow-lg">
         <div className="flex items-center justify-between rounded-t-lg bg-richblack-700 p-4 sm:p-5">
           <p className="text-base sm:text-lg md:text-xl font-semibold text-richblack-5">

@@ -1,16 +1,12 @@
 
+require("dotenv").config(); // Should be at top of the file
 const jwt = require("jsonwebtoken");
-const dotenv = require("dotenv");
 const User = require("../models/User");
 
-dotenv.config();
 exports.auth = async (req, res, next) => {
 	try {
 		
-		const token =
-			req.cookies.token ||
-			req.body.token ||
-			req.header("Authorization").replace("Bearer ", "");
+		const token = req.headers.authorization.replace("Bearer ", "");
 
 		
 		if (!token) {

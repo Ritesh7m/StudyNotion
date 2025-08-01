@@ -22,13 +22,23 @@ function loadScript(src) {
 }
 
 // ✅ Buy Course Function
-export async function BuyCourse(token, courses, user_details, navigate, dispatch) {
+export async function BuyCourse(
+  token,
+  courses,
+  user_details,
+  navigate,
+  dispatch
+) {
   const toastId = toast.loading("Loading...");
   try {
-    const res = await loadScript("https://checkout.razorpay.com/v1/checkout.js");
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
 
     if (!res) {
-      toast.error("Razorpay SDK failed to load. Check your Internet Connection.");
+      toast.error(
+        "Razorpay SDK failed to load. Check your Internet Connection."
+      );
       return;
     }
 
@@ -49,13 +59,12 @@ export async function BuyCourse(token, courses, user_details, navigate, dispatch
     // console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data);
 
     // ✅ Get Razorpay Key from .env
-    const razorpayKey = process.env.REACT_APP_RAZORPAY_KEY;
+    const razorpayKey = import.meta.env.VITE_RAZORPAY_KEY;
     if (!razorpayKey) {
       toast.error("Razorpay key not set in environment.");
       return;
     }
 
-   
     const options = {
       key: razorpayKey,
       currency: orderResponse.data.data.currency,
@@ -63,13 +72,20 @@ export async function BuyCourse(token, courses, user_details, navigate, dispatch
       order_id: orderResponse.data.data.id,
       name: "StudyNotion",
       description: "Thank you for purchasing the course.",
-      image: "https://upload.wikimedia.org/wikipedia/commons/3/3f/Razorpay_logo.png", // ✅ Use a public image URL
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/3/3f/Razorpay_logo.png", // ✅ Use a public image URL
       prefill: {
-        name: `${user_details?.firstName || ""} ${user_details?.lastName || ""}`,
+        name: `${user_details?.firstName || ""} ${
+          user_details?.lastName || ""
+        }`,
         email: user_details?.email || "test@example.com",
       },
       handler: function (response) {
-        sendPaymentSuccessEmail(response, orderResponse.data.data.amount, token);
+        sendPaymentSuccessEmail(
+          response,
+          orderResponse.data.data.amount,
+          token
+        );
         verifyPayment({ ...response, courses }, token, navigate, dispatch);
       },
     };
@@ -81,14 +97,12 @@ export async function BuyCourse(token, courses, user_details, navigate, dispatch
       console.error("Payment Failed:", response.error);
       toast.error(response.error.description || "Oops! Payment Failed.");
     });
-
   } catch (error) {
     console.error("PAYMENT API ERROR............", error);
     toast.error("Could not initiate payment.");
   }
   toast.dismiss(toastId);
 }
-
 
 async function verifyPayment(bodyData, token, navigate, dispatch) {
   const toastId = toast.loading("Verifying Payment...");
@@ -107,7 +121,6 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
     toast.success("Payment successful. You are enrolled in the course.");
     navigate("/dashboard/enrolled-courses");
     dispatch(resetCart());
-
   } catch (error) {
     console.error("PAYMENT VERIFY ERROR............", error);
     toast.error("Could not verify payment.");

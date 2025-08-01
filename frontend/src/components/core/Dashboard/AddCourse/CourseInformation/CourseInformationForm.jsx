@@ -155,7 +155,7 @@
     return (
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6"
+        className="space-y-8 rounded-md border border-richblack-700 bg-richblack-800 p-6"
       >
         {/* Course Title */}
         <div className="flex flex-col space-y-2">
@@ -207,7 +207,7 @@
                   value: /^(0|[1-9]\d*)(\.\d+)?$/,
                 },
               })}
-              className="form-style w-full !pl-12"
+              className="form-style w-full pl-12!"
             />
             <HiOutlineCurrencyRupee className="absolute left-3 top-1/2 inline-block -translate-y-1/2 text-2xl text-richblack-400" />
           </div>

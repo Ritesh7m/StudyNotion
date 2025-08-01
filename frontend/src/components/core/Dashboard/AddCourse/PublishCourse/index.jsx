@@ -64,7 +64,7 @@ export default function PublishCourse() {
   };
 
   return (
-    <div className="rounded-md border-[1px] border-richblack-700 bg-richblack-800 p-6">
+    <div className="rounded-md border border-richblack-700 bg-richblack-800 p-6">
       <p className="text-2xl font-semibold text-richblack-5">
         Publish Settings
       </p>
@@ -76,7 +76,7 @@ export default function PublishCourse() {
               type="checkbox"
               id="public"
               {...register("public")}
-              className="border-gray-300 h-4 w-4 rounded bg-richblack-500 text-richblack-400 focus:ring-2 focus:ring-richblack-5"
+              className="border-gray-300 h-4 w-4 rounded-sm bg-richblack-500 text-richblack-400 focus:ring-2 focus:ring-richblack-5"
             />
             <span className="ml-2 text-richblack-400">
               Make this course as public

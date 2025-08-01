@@ -18,7 +18,7 @@ const CodeBlocks = ({
 
 
       {/* Section 1  */}
-      <div className="w-[100%] lg:w-[50%] flex flex-col gap-8">
+      <div className="w-full lg:w-[50%] flex flex-col gap-8">
         {heading}
 
         {/* Sub Heading */}
@@ -41,7 +41,7 @@ const CodeBlocks = ({
       </div>
 
       {/* Section 2 */}
-      <div className="h-fit code-border flex flex-row py-3 text-[10px] sm:text-sm leading-[18px] sm:leading-6 relative w-[100%] lg:w-[470px]">
+      <div className="h-fit code-border flex flex-row py-3 text-[10px] sm:text-sm leading-[18px] sm:leading-6 relative w-full lg:w-[470px]">
         {backgroundGradient}
         {/* Indexing */}
         <div className="text-center flex flex-col   w-[10%] select-none text-richblack-400 font-inter font-bold ">
