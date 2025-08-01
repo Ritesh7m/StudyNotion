@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import "video-react/dist/video-react.css";
@@ -237,14 +237,15 @@ const VideoDetails = () => {
           
             <IconBtn
               disabled={loading}
-              onClick={handleLectureCompletion}
-              text={!loading ? "Mark As Completed" : "Loading..."}
+              onclick={() => handleLectureCompletion()}
               customClasses="text-xl max-w-max px-4 mx-auto"
-            />
+            >
+              {!loading ? "Mark As Completed" : "Loading..."}
+</IconBtn>
           )}
           <IconBtn
             disabled={loading}
-            onClick={() => {
+            onclick={() => {
               if (videoRef?.current) {
                 videoRef.current.currentTime = 0;
                 videoRef.current.play();

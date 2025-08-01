@@ -70,7 +70,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
           {courseSectionData.map((course, index) => (
             <div
               className="mt-2 cursor-pointer text-sm text-richblack-5"
-              onClick={() => setActiveStatus(course?._id)}
+              onClick={() => setActiveStatus(course._id)}
               key={index}
             >
               {/* Section */}
@@ -82,7 +82,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
                  
                   <span
                     className={`${
-                      activeStatus === course?.sectionName
+                      activeStatus == course._id
                         ? "rotate-0"
                         : "rotate-180"
                     } transition-all duration-500`}
@@ -93,7 +93,7 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
               </div>
 
               {/* Sub Sections */}
-              {activeStatus === course?._id && (
+              {activeStatus == course?._id && (
                 <div className="transition-[height] duration-500 ease-in-out">
                   {course.subSection.map((topic, i) => (
                     <div
