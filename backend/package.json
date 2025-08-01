@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "start": "node index.js",
-    "build": "echo 'build phase completed'"
+    "start": "node dist/bundle.js",
+    "build": "npx esbuild index.js --bundle --platform=node --outfile=dist/bundle.js --external:bcrypt "
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,7 @@
     "razorpay": "^2.9.6"
   },
   "devDependencies": {
+    "esbuild": "^0.25.8",
     "pm2": "^6.0.8"
   }
 }
